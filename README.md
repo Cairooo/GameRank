@@ -1,141 +1,142 @@
-🎮 GameRank
+# 🎮 GameRank
 
-GameRank is a full-stack web application that allows users to create and manage a personal ranking of their favorite games. The project demonstrates CRUD operations, server-side rendering, database persistence, and integration with an external API.
+GameRank is a full-stack web application that allows users to create and manage a personal ranking of their favorite games.  
+The project focuses on backend fundamentals such as CRUD operations, database persistence, API consumption, and server-side rendering.
 
-This project was built as part of a career transition into web development, focusing on learning back-end fundamentals while maintaining a clean and simple front-end.
+---
 
-🚀 Features
+## 📌 Features
 
-Create game rankings by category (S, A, B, C)
+- Create a ranking of games divided into categories (S, A, B, C)
+- Fetch game cover images dynamically using the IGDB API
+- Add new games to the ranking
+- Edit existing games (update cover and rank)
+- Delete games from the database
+- Server-side rendering with EJS
+- Persistent data storage using PostgreSQL
 
-Edit existing game entries
+---
 
-Delete games from the ranking
+## 🛠️ Tech Stack
 
-Persistent data storage using PostgreSQL
+### Backend
+- Node.js
+- Express.js
+- PostgreSQL
+- pg (node-postgres)
+- Axios
 
-Integration with the IGDB API to fetch game cover images
+### Frontend
+- EJS (Embedded JavaScript Templates)
+- HTML5
+- CSS3
 
-Server-side rendering with EJS
+### External API
+- IGDB API (via Twitch OAuth Client Credentials)
 
-🛠️ Tech Stack
-Front-end
+---
 
-HTML5
+## 🗂️ Project Structure
 
-CSS3
-
-EJS (Embedded JavaScript Templates)
-
-Back-end
-
-Node.js
-
-Express.js
-
-Axios
-
-Database
-
-PostgreSQL
-
-External API
-
-IGDB API (via Twitch OAuth authentication)
-
-📂 Project Structure
 GameRank/
-├── public/            # Static assets (CSS, images)
-├── views/             # EJS templates
-│   ├── index.ejs
-│   ├── ranking.ejs
-│   └── edit.ejs
-├── index.js           # Main server file
+├── public/
+│ └── style/
+│ └── main.css
+├── views/
+│ ├── index.ejs
+│ ├── ranking.ejs
+│ └── edit.ejs
+├── index.js
 ├── package.json
-├── .env               # Environment variables (not committed)
+├── .env
 └── README.md
-⚙️ Environment Variables
 
-This project uses environment variables to store sensitive credentials. Create a .env file in the root directory with the following values:
+
+---
+
+## ⚙️ Environment Variables
+
+This project uses environment variables to securely store API credentials.
+
+Create a `.env` file in the root directory with the following variables:
 
 TWITCH_CLIENT_ID=your_client_id_here
 TWITCH_CLIENT_SECRET=your_client_secret_here
 
-⚠️ The .env file is ignored via .gitignore and should never be committed to GitHub.
 
-🧠 How It Works
+> ⚠️ The `.env` file must **not** be committed to GitHub.
 
-The user submits a game name and selects a rank category
+---
 
-The server requests an OAuth token from Twitch
+## 🚀 How to Run Locally
 
-The IGDB API is queried using the token
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/gamerank.git
+Navigate into the project folder:
 
-The game cover image URL is extracted
-
-The data is stored in a PostgreSQL database
-
-The ranking page is re-rendered with updated data
-
-▶️ Running the Project Locally
-Prerequisites
-
-Node.js
-
-PostgreSQL
-
-Git
-
-Steps
-# Clone the repository
-git clone https://github.com/your-username/gamerank.git
-
-
-# Navigate into the project folder
 cd gamerank
 
-
-# Install dependencies
+Install dependencies:
 npm install
 
+Create the PostgreSQL database:
+CREATE DATABASE gamerank;
 
-# Start the server
+Configure the .env file with your API credentials
+
+Start the server:
 nodemon index.js
 
-The application will run at:
-
+Open the application in your browser:
 http://localhost:3000
-📌 What This Project Demonstrates
 
-Understanding of RESTful routing
+📚 What This Project Demonstrates
 
-CRUD operations with PostgreSQL
+Full CRUD implementation with PostgreSQL
 
-API authentication using OAuth
+Backend routing and RESTful patterns using Express
 
 Server-side rendering with EJS
 
-Clean separation of concerns
+Consumption of third-party APIs with OAuth authentication
 
-Error handling using try/catch
+Secure handling of sensitive data using environment variables
 
-🎯 Future Improvements
+Error handling with try/catch blocks
 
-User authentication
+Clear separation between frontend views and backend logic
 
-Responsive UI improvements
+Backend-driven navigation instead of file-based routing
 
-Pagination or filtering
+🎯 Project Purpose
 
-Refactoring repetitive routes
+This project was developed during a career transition into web development.
+The goal was to focus on backend fundamentals while keeping the frontend clean, simple, and functional.
 
-Front-end migration to React
+The emphasis is on:
+
+Code clarity
+
+Correct backend logic
+
+Real-world development practices
+
+🔮 Possible Improvements
+
+User authentication (JWT or sessions)
+
+User-specific rankings
+
+API response caching
+
+Code refactoring to reduce repetition
+
+Frontend refactor using React
+
+Better error feedback on the UI
 
 👤 Author
 
-Cairo Estrella de Oliveira
-Aspiring Full-Stack Developer
-
-📜 License
-
-This project is for educational purposes only.
+Developed by Cairo Estrella de Oliveira
+Junior Full-Stack / Backend-focused Developer
