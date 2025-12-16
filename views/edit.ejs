@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+    <title>Edit Rank</title>
+  </head>
+  <body>
+    <h1 class="editTitle">Game Ranking</h1>
+    <h2 class="subTitleE">Editing screen:</h2>
+    <div class="imgEdit">
+      <img class="imgDel" src="<%= dataRank.url %>" alt="game cover" />
+    </div>
+    <form class="editing" action="/edit/<%- dataRank.id %>" method="post">
+      <label for="Name of the game:"></label>
+      <input
+        class="editBar"
+        type="text"
+        name="gameName"
+        required
+        placeholder="type your game!"
+      />
+      <label for="Rank:"></label>
+      <select class="selectButton" name="rank">
+        <option value="S">S</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+      </select>
+      <button class="saveButton" type="submit">Save</button>
+    </form>
+    <form
+      class="delete"
+      action="/delete/<%- dataRank.id %>"
+      method="post"
+      onsubmit="return confirm('Are you sure you wanna delete this data?')"
+    >
+      <button class="delButton" type="submit">Delete</button>
+    </form>
+  </body>
+</html>

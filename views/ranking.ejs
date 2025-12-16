@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nabla&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+      rel="stylesheet"
+    />
+    <title>Rank Table</title>
+  </head>
+  <body>
+    <div class="secondPageContainer">
+      <h1 class="secondPageTitle">Game Ranking</h1>
+      <h2 class="subTitle">How it work:</h2>
+      <p class="explanation">
+        Think about the games you want to review, think about the category you
+        want to assign to the game, and type the game's name in the bar
+        corresponding to each category, and you're done. You can also click at
+        images that you added to edit or delete your data.
+      </p>
+    </div>
+    <div class="container-s">
+      <div class="S">S</div>
+      <% dataS.forEach(item => { %>
+      <a href="/edit/<%- item.id %>">
+        <img class="imgS" src="<%= item.url %>" alt="gameS" />
+      </a>
+      <% }) %>
+    </div>
+    <div class="container-a">
+      <div class="A">A</div>
+      <% dataA.forEach(item => { %>
+      <a href="/edit/<%- item.id %>">
+        <img class="imgS" src="<%= item.url %>" alt="gameS" />
+      </a>
+      <% }) %>
+    </div>
+    <div class="container-b">
+      <div class="B">B</div>
+      <% dataB.forEach(item => { %>
+      <a href="/edit/<%- item.id %>">
+        <img class="imgS" src="<%= item.url %>" alt="gameS" />
+      </a>
+      <% }) %>
+    </div>
+    <div class="container-c">
+      <div class="C">C</div>
+      <% dataC.forEach(item => { %>
+      <a href="/edit/<%- item.id %>">
+        <img class="imgS" src="<%= item.url %>" alt="gameS" />
+      </a>
+      <% }) %>
+    </div>
+    <div class="formContainer">
+      <form action="/rankGame" method="post">
+        <input
+          class="editBar"
+          type="text"
+          name="gameName"
+          required
+          placeholder="type your game!"
+        />
+        <label for="Rank:"></label>
+        <select class="selectButton" name="rank">
+          <option value="S">S</option>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+        <button class="buttonS" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,370 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: "Abel", "serif";
+  font-size: clamp(2rem, 2vh, 2rem);
+  height: 100vh;
+}
+
+.firstPageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstPageTitle {
+  font-family: "nabla", "serif";
+  font-size: clamp(3rem, 13vh, 8rem);
+}
+
+.firstPageText {
+  max-width: 600px;
+  color: white;
+  text-align: justify;
+}
+
+.startButton {
+  background-color: #ffe24c;
+  height: 3rem;
+  width: 6rem;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+  padding-top: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px 5px 5px 5px;
+  color: black;
+}
+
+.startButton:hover {
+  opacity: 0.7;
+}
+
+.secondPageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondPageTitle {
+  font-family: "nabla", "serif";
+  color: white;
+  font-size: clamp(3rem, 8vh, 8rem);
+}
+
+.secondPageTitleL {
+  text-decoration: none;
+}
+
+.subTitle {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.explanation {
+  max-width: 600px;
+  margin-bottom: 4rem;
+  color: white;
+}
+
+.editTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "nabla", "serif";
+}
+
+.subTitleE {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.editing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.container-s {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  border: 1px solid white;
+  height: 13rem;
+}
+
+.imgS {
+  height: 13rem;
+}
+
+.imgS:hover {
+  opacity: 0.7;
+}
+
+.S {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8bae66;
+  border: 5px solid white;
+  height: 12.4rem;
+  width: 10rem;
+  color: white;
+}
+
+.container-a {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  color: white;
+  border: 1px solid white;
+  height: 13rem;
+}
+
+.A {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3cf7a;
+  border: 5px solid white;
+  height: 12.4rem;
+  width: 10rem;
+  color: white;
+}
+
+.container-b {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  color: white;
+  border: 1px solid white;
+  height: 13rem;
+}
+
+.B {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cc561e;
+  border: 5px solid white;
+  height: 12.4rem;
+  width: 10rem;
+  color: white;
+}
+
+.container-c {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  color: white;
+  border: 1px solid white;
+  height: 13rem;
+}
+
+.C {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aa2b1d;
+  border: 5px solid white;
+  height: 12.4rem;
+  width: 10rem;
+  color: white;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+
+#sTitle {
+  border: solid 3px #8bae66;
+  height: 2rem;
+  width: 15rem;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#aTitle {
+  border: solid 3px #f3cf7a;
+  height: 2rem;
+  width: 15rem;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#bTitle {
+  border: solid 3px #cc561e;
+  height: 2rem;
+  width: 15rem;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#cTitle {
+  border: solid 3px #aa2b1d;
+  height: 2rem;
+  width: 15rem;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.buttonS {
+  border: none;
+  background-color: #ffe24c;
+  color: black;
+  border-radius: 5px 5px 5px 5px;
+  height: 2.8rem;
+  width: 3.3rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.buttonS:hover {
+  opacity: 0.7;
+}
+
+.buttonA {
+  border: none;
+  background-color: #f3cf7a;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  height: 2.5rem;
+  width: 3rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.buttonA:hover {
+  opacity: 0.7;
+}
+
+.buttonB {
+  border: none;
+  background-color: #cc561e;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  height: 2.5rem;
+  width: 3rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.buttonB:hover {
+  opacity: 0.7;
+}
+
+.buttonC {
+  border: none;
+  background-color: #aa2b1d;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  height: 2.5rem;
+  width: 3rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.buttonC:hover {
+  opacity: 0.7;
+}
+
+.imgEdit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.imgDel {
+  height: 10rem;
+}
+
+.editBar {
+  border: solid 5px #ffe24c;
+  height: 2rem;
+  width: 15rem;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.selectButton {
+  padding-left: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: none;
+  background-color: #ffe24c;
+  color: black;
+  border-radius: 5px 5px 5px 5px;
+  height: 2.8rem;
+  width: 3rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.selectButton:hover {
+  opacity: 0.7;
+}
+
+.saveButton {
+  border: none;
+  background-color: #ffe24c;
+  color: black;
+  border-radius: 5px 5px 5px 5px;
+  height: 2.8rem;
+  width: 3rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.saveButton:hover {
+  opacity: 0.7;
+}
+
+.delButton {
+  border: none;
+  background-color: #fa6868;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  height: 2.8rem;
+  width: 3rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delButton:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 1366px) {
+  .firstPageTitle {
+    margin-top: 5rem;
+    font-size: 3rem;
+  }
+
+  .firstPageText {
+    margin: 2rem 2rem;
+  }
+
+  .editTitle {
+    margin-top: 10rem;
+    font-size: 3rem;
+  }
+
+  .explanation {
+    margin: 1rem 1rem;
+    text-align: justify;
+  }
+}
