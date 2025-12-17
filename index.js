@@ -6,17 +6,17 @@ import pg from "pg";
 
 dotenv.config();
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 let igdbToken = null;
 let igdbTokenExpiresAt = null;
 
 const db = new pg.Client({
-  user: "postgres",
-  host: "localhost",
-  database: "gamerank",
-  password: "5432",
-  port: 5433,
+  connectionString: process.env.DATABASE_URL,
+  ssl:
+    process.env.NODE_ENV === "production"
+      ? { rejectUnauthorized: false }
+      : false,
 });
 
 db.connect();
