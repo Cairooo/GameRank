@@ -11,11 +11,9 @@ const port = process.env.PORT || 3000;
 let igdbToken = null;
 let igdbTokenExpiresAt = null;
 
-const db = new pg.Client({
+const db = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false,
-  },
+  ssl: { rejectUnauthorized: false },
 });
 
 async function connectDB() {
