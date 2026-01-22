@@ -13,10 +13,9 @@ let igdbTokenExpiresAt = null;
 
 const db = new pg.Client({
   connectionString: process.env.DATABASE_URL,
-  ssl:
-    process.env.NODE_ENV === "production"
-      ? { rejectUnauthorized: false }
-      : false,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 db.connect();
