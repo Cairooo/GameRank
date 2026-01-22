@@ -22,11 +22,8 @@ async function connectDB() {
     console.log("✅ Connected to PostgreSQL");
   } catch (err) {
     console.error("❌ Database connection error:", err.message);
-    process.exit(1); // mata o processo de forma limpa
   }
 }
-
-connectDB();
 
 async function getIGDBToken() {
   if (igdbToken && igdbTokenExpiresAt > Date.now()) {
@@ -160,4 +157,5 @@ app.post("/delete/:id", async (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server running on ${port}.`);
+  connectDB();
 });
