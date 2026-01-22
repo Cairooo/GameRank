@@ -18,7 +18,17 @@ const db = new pg.Client({
   },
 });
 
-db.connect();
+async function connectDB() {
+  try {
+    await db.connect();
+    console.log("✅ Connected to PostgreSQL");
+  } catch (err) {
+    console.error("❌ Database connection error:", err.message);
+    process.exit(1); // mata o processo de forma limpa
+  }
+}
+
+connectDB();
 
 async function getIGDBToken() {
   if (igdbToken && igdbTokenExpiresAt > Date.now()) {
