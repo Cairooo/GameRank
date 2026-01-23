@@ -16,7 +16,9 @@ let igdbTokenExpiresAt = null;
 
 const db = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: true,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 async function getIGDBToken() {
