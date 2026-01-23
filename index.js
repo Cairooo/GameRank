@@ -13,17 +13,8 @@ let igdbTokenExpiresAt = null;
 
 const db = new pg.Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false },
+  ssl: true,
 });
-
-async function connectDB() {
-  try {
-    await db.connect();
-    console.log("✅ Connected to PostgreSQL");
-  } catch (err) {
-    console.error("❌ Database connection error:", err.message);
-  }
-}
 
 async function getIGDBToken() {
   if (igdbToken && igdbTokenExpiresAt > Date.now()) {
